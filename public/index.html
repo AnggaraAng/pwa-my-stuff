@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Facilities</title>
+    <!-- Materialize icon, css & Js -->
+    <link rel="stylesheet" type="text/css" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <!-- IOS Support -->
+    <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#2c3e50">
+    <meta name="theme-color" content="#95a5a6">
+</head>
+ 
+
+<body class="grey lighten-4">
+
+    <!-- Top Nav -->
+    <nav class="z-depth-0">
+        <div class="nav-wapper container">
+            <a href="/">My <span>Facilities</span></a>
+            <span class="right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Side Nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+        <li><a class="subheader">My Facilities</a></li>
+        <li><a href="/" class="waves-effect">Home</a></li>
+        <li><a href="/page/about.html" class="waves-effect">About</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="/page/contact.html" class="waves-effect">
+                <i class="material-icons">mail_outline</i>Contact</a>
+        </li>
+    </ul>
+
+    <!-- Information -->
+    <div class="informations container grey-text text-darken-1">
+        <h6 class="center">My Stuff</h6>
+
+    </div>
+
+    <!-- Button Add -->
+    <div class="center">
+        <a href="" class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    <!-- Add Facilities Side Nav -->
+    <div id="side-form" class="sidenav side-form">
+        <form action="" class="add-information container section">
+            <h6>New Facilities</h6>
+            <div class="divider"></div>
+            <div class="input-field">
+                <input type="text" placeholder="your title" id="title" class="validate">
+                <label for="title">Facilities Title</label>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="your Specification" id="specs" class="validate">
+                <label for="title">Specification</label>
+            </div>
+            <div class="input-field center">
+                <button class="btn-small">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="grid">
+            <p class="copyright">Copyright by Luckycious</p>
+        </div>
+    </footer>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyATCpUIF-DpcnR4SW10TwVI15pnVT-ubjo",
+            authDomain: "pwa-my-stuff.firebaseapp.com",
+            databaseURL: "https://pwa-my-stuff.firebaseio.com",
+            projectId: "pwa-my-stuff",
+            storageBucket: "pwa-my-stuff.appspot.com",
+            messagingSenderId: "917095741585",
+            appId: "1:917095741585:web:1ce431330c37fdc6e0a730",
+            measurementId: "G-BVFMSJWMYF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/ui.js"></script>
+</body>
+
+</html>
